@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+
+# Editor configs
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+
+# Video & image outputs (large files)
+api/outputs/
+*.mp4
+*.avi
+*.mov
+*.jpg
+*.jpeg
+*.png
+
+# Model weights (if any)
+*.pt
+*.onnx
