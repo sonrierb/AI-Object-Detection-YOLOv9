@@ -56,7 +56,7 @@ st.markdown("""
 st.markdown('<h1 class="main-header">🔍 AI Object Detection System</h1>', unsafe_allow_html=True)
 st.markdown("""
 <div class="info-box">
-    <strong>Powered by YOLOv8</strong> - Real-time object detection for images and videos. 
+    <strong>Powered by YOLOv9</strong> - Real-time object detection for images and videos. 
     Upload your media files and get instant detection results with bounding boxes and confidence scores.
 </div>
 """, unsafe_allow_html=True)
@@ -80,7 +80,7 @@ with st.sidebar:
     st.markdown("---")
     st.subheader("About")
     st.info("""
-    This system uses YOLOv8 for object detection:
+    This system uses YOLOv9 for object detection:
     - **Images**: Instant processing
     - **Videos**: Real-time processing with live preview
     - **Output**: Annotated files saved locally
@@ -273,7 +273,7 @@ with col2:
 st.markdown("---")
 st.markdown(
     "<div style='text-align: center; color: #666;'>"
-    "AI Object Detection System • Powered by YOLOv8 • Built with Streamlit & FastAPI"
+    "AI Object Detection System • Powered by YOLOv9 • Built with Streamlit & FastAPI"
     "</div>", 
     unsafe_allow_html=True
 )
