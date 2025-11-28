@@ -38,111 +38,151 @@ Python 3.9+
 ## Installation
 
 1. Create virtual environment
+
 run: python3 -m venv venv
+
 run: source venv/bin/activate        # macOS / Linux
+
 run: venv\Scripts\activate           # Windows
 
 2. Install dependencies
+
 run: pip install -r requirements.txt
 
 ## Running the Application
 
 1. Start FastAPI Backend
+
 run: uvicorn main:app --reload
 
 Server starts at:
 👉 http://127.0.0.1:8000
 
 API Docs (Swagger UI)
-
 👉 http://127.0.0.1:8000/docs
 
 2. Start Streamlit UI
+
 run: streamlit run app.py
 
 This opens an interactive dashboard for:
+
 ✔ Image detection
+
 ✔ Video detection (with progress tracking)
 
 ## Main Endpoints (FastAPI)
 
 1. Health Check
+
 GET /health
 
 2. Image Detection
+
 POST /detect
 
 Body: image file
+
 Returns: annotated image + metadata (bbox, classes, confidence)
 
 3. Video Detection
+
 POST /detect_video
 
 Runs detection in background, returns task_id.
 
 4. Video Status
+
 GET /video_status/{task_id}
 
 5. Download Final Video
+
 GET /video_result/{task_id}
 
 ## Webcam Live Detection
 
 run: python webcam.py
+
 Press q to exit webcam window.
 
 ## Desktop Video Viewer
 
 python desktop_viewer.py <task_id>
+
 Controls:
+
 q → quit
+
 p → pause/resume
+
 r → restart video
 
 ## Core Logic Overview
 
 # utils.py
+
 Loads YOLO model
+
 Runs detection
+
 Extracts bounding boxes, classes, confidence
+
 Saves annotated images
+
 Encodes image bytes for API response
 
 # main.py (FastAPI)
+
 Image detection → instant
+
 Video detection → background task
+
 Saves output to /outputs
+
 Returns progress + detection summary
 
 # app.py (Streamlit)
+
 Upload UI
+
 Real-time detection viewer
+
 Download results
+
 Live video progress bar
 
 ## Requirements
 
 requirements.txt
-fastapi
-uvicorn[standard]
-python-multipart
-ultralytics
-opencv-python-headless
-numpy
-pillow
-streamlit
-requests
 
+fastapi
+
+uvicorn[standard]
+
+python-multipart
+
+ultralytics
+
+opencv-python-headless
+
+numpy
+
+pillow
+
+streamlit
+
+requests
 
 ## Example Outputs
 
 Detected Image → saved as detected_<filename>.jpg
+
 Processed Video → saved as detected_<task_id>.mp4
 
 Both appear in:
+
 api/outputs/
 
 ##Author
 
-Muskan Bansal
-GenAI Engineer | Computer Vision | FastAPI | Streamlit
+Created by Muskan Bansal (GenAI Engineer)
