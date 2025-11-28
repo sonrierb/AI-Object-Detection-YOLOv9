@@ -8,7 +8,7 @@ from pathlib import Path
 def get_model():
     """Load YOLO model"""
     try:
-        model = YOLO('yolov8n.pt')  # or yolov8s.pt, yolov8m.pt based on your needs
+        model = YOLO("yolov9c.pt")  # or yolov8s.pt, yolov8m.pt based on your needs
         return model
     except Exception as e:
         print(f"Error loading model: {e}")

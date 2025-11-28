@@ -26,7 +26,7 @@ from utils import get_model, annotate_image_and_extract, bgr_to_jpeg_bytes, save
 # Initialize FastAPI app
 # ------------------------------------------------------------
 app = FastAPI(
-    title="YOLOv8 Detection API",
+    title="YOLOv9 Detection API",
     description="Real-time object detection for images and videos",
     version="1.0.0"
 )
@@ -55,7 +55,7 @@ try:
     if model is None:
         logger.error("Failed to load YOLO model")
     else:
-        logger.info("YOLOv8 model loaded successfully")
+        logger.info("YOLOv9 model loaded successfully")
 except Exception as e:
     logger.error(f"Error loading model: {e}")
     model = None
