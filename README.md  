@@ -1,10 +1,10 @@
 🧠 AI Object Detection System (YOLOv8 + FastAPI + Streamlit)
 
-Real-time object detection system built using YOLOv8, integrated with FastAPI, Streamlit, and OpenCV, supporting image detection, video detection, webcam inference, and a desktop video viewer.
+Real-time object detection system built using YOLOv9, integrated with FastAPI, Streamlit, and OpenCV, supporting image detection, video detection, webcam inference, and a desktop video viewer.
 
 ## Features
 
-✔ Real-time object detection (YOLOv8)
+✔ Real-time object detection (YOLOv9)
 ✔ Image upload + detection API
 ✔ Video upload + background processing with progress tracking
 ✔ Streamlit web UI for detection
@@ -29,7 +29,7 @@ object_detection/
 
 ## Tech Stack
 
-YOLOv8 (Ultralytics)
+YOLOv9 (Ultralytics)
 FastAPI
 OpenCV
 Streamlit
@@ -96,11 +96,8 @@ Press q to exit webcam window.
 
 python desktop_viewer.py <task_id>
 Controls:
-
 q → quit
-
 p → pause/resume
-
 r → restart video
 
 ## Core Logic Overview
